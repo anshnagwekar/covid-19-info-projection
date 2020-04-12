@@ -48,7 +48,7 @@ def parseCountyData():
     cfile_cases = []
     cfile_deaths = []
     # csv file in same dir
-    with open('covid-19-data/us-counties.csv', 'r') as csv_file:
+    with open('../covid-19-data/us-counties.csv', 'r') as csv_file:
         csv_read = csv.reader(csv_file)
         next(csv_read)
         for line in csv_read:
@@ -80,7 +80,7 @@ def parseStateData():
     sfile_cases = []
     sfile_deaths = []
     # csv file in the same dir
-    with open('covid-19-data/us-states.csv', 'r') as csv_file1:
+    with open('../covid-19-data/us-states.csv', 'r') as csv_file1:
         csv_read1 = csv.reader(csv_file1)
         next(csv_read1)
         for line in csv_read1:
