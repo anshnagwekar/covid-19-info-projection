@@ -5,7 +5,7 @@ from graph import graphDemoCases, graphDemoDeaths
 
 # add a while loop or try 
 # catch to detect wrong input type
-def test1():
+def test10():
     countyParse = createState()
     givenDate = input("What date are you asking about: ")
 

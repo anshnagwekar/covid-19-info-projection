@@ -204,4 +204,3 @@ def createState():
             stateObj.addVal(sfile_dates[a], sfile_cases[a], sfile_deaths[a])
     return stateObj
 
-parseStateData()
