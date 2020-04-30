@@ -37,9 +37,9 @@ def parseCountyData():
     global cfile_dates
     global cfile_county
     global cfile_state
-    global cfile_fips 
-    global cfile_cases 
-    global cfile_deaths 
+    global cfile_fips
+    global cfile_cases
+    global cfile_deaths
 
     cfile_dates = []
     cfile_county = []
@@ -48,7 +48,7 @@ def parseCountyData():
     cfile_cases = []
     cfile_deaths = []
     # csv file in same dir
-    with open('../covid-19-data/us-counties.csv', 'r') as csv_file:
+    with open('../../covid-19-data/us-counties.csv', 'r') as csv_file:
         csv_read = csv.reader(csv_file)
         next(csv_read)
         for line in csv_read:
@@ -58,21 +58,21 @@ def parseCountyData():
             cfile_fips.append(line[3])
             cfile_cases.append(int(line[4]))
             cfile_deaths.append(int(line[5]))
-    '''
+'''
     print(len(cfile_dates))
     print(len(cfile_state))
     print(len(cfile_fips))
     print(len(cfile_cases))
     print(len(cfile_deaths))
-    '''
+'''
 
 
 def parseStateData():
-    global sfile_dates 
+    global sfile_dates
     global sfile_state
-    global sfile_fips 
-    global sfile_cases 
-    global sfile_deaths 
+    global sfile_fips
+    global sfile_cases
+    global sfile_deaths
 
     sfile_dates = []
     sfile_state = []
@@ -80,7 +80,7 @@ def parseStateData():
     sfile_cases = []
     sfile_deaths = []
     # csv file in the same dir
-    with open('../covid-19-data/us-states.csv', 'r') as csv_file1:
+    with open('../../covid-19-data/us-states.csv', 'r') as csv_file1:
         csv_read1 = csv.reader(csv_file1)
         next(csv_read1)
         for line in csv_read1:
@@ -89,7 +89,7 @@ def parseStateData():
             sfile_fips.append(line[2])
             sfile_cases.append(int(line[3]))
             sfile_deaths.append(int(line[4]))
-    # write all SCC 
+    # write all SCC
 '''
     print(len(sfile_dates))
     print(len(sfile_state))
@@ -204,4 +204,4 @@ def createState():
             stateObj.addVal(sfile_dates[a], sfile_cases[a], sfile_deaths[a])
     return stateObj
 
-
+parseStateData()
