@@ -1,4 +1,4 @@
-# covid-19-info-projection
+# COVID-19 Advanced Information Projection
 
 This small project was a few scripts I wrote that read in the latest COVID19 Case and Death count (link: https://github.com/nytimes/covid-19-data) in American states and counties.
 Scripts include:
